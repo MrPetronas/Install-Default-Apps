@@ -30,15 +30,9 @@ Start-Process -FilePath "$output1" -Verb RunAs
 $temp = Get-CimInstance -ClassName Win32_ComputerSystem | select Model; $site = "https://www.google.com/search?q="+ $temp.Model + " Drivers"; start $site
 
 Invoke-WebRequest -Uri $url2 -OutFile $output2
-sleep -s 240
+sleep -s 5
 Start-Process -FilePath "$output2" -Verb RunAs
 
-$javadowload = "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=244581_d7fc238d0cbf4b0dac67be84580cfb4b"
-$javadowloadlocal = "~\Downloads\java.exe"
-
-Invoke-WebRequest -Uri $javadowload -OutFile $javadowloadlocal
-sleep -s 120
-Start-Process -FilePath "$javadowloadlocal" -Verb RunAs
 
 if((read-host "ar reikia office 365? jei ne spauskite N ir Enter") -like "n")
 {

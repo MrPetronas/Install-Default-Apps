@@ -11,6 +11,9 @@
 #Disable Windows Fast boot
 Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power\' -Name 'HiberbootEnabled' -Value 0
 
+#Starts Update Scan
+C:\Windows\system32\usoclient.exe StartInteractiveScan
+
 #set to never sleep
 Powercfg /x -standby-timeout-ac 0
 

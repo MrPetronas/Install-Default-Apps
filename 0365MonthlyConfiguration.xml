@@ -3,14 +3,20 @@
     <Product ID="O365BusinessRetail">
       <Language ID="en-us" />
       <Language ID="lt-lt" />
+      <ExcludeApp ID="Access" />
       <ExcludeApp ID="Groove" />
       <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="Publisher" />
     </Product>
     <Product ID="LanguagePack">
       <Language ID="en-us" />
       <Language ID="lt-lt" />
+      <ExcludeApp ID="Access" />
       <ExcludeApp ID="Groove" />
       <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="Publisher" />
       
     </Product>
   </Add>

@@ -6,7 +6,6 @@
       <ExcludeApp ID="Access" />
       <ExcludeApp ID="Groove" />
       <ExcludeApp ID="Lync" />
-      <ExcludeApp ID="OneDrive" />
       <ExcludeApp ID="Publisher" />
     </Product>
     <Product ID="LanguagePack">
@@ -15,7 +14,6 @@
       <ExcludeApp ID="Access" />
       <ExcludeApp ID="Groove" />
       <ExcludeApp ID="Lync" />
-      <ExcludeApp ID="OneDrive" />
       <ExcludeApp ID="Publisher" />
       
     </Product>

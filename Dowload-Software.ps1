@@ -11,6 +11,27 @@
 #Disable Windows Fast boot
 Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power\' -Name 'HiberbootEnabled' -Value 0
 
+
+#default user registry modification
+
+reg load HKU\default C:\Users\Default\NTUSER.DAT
+
+REG ADD HKU\Default\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds /v ShellFeedsTaskbarViewMode /t REG_DWORD /d 2 /f
+
+REG ADD HKU\Default\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Start_SearchFiles /t REG_DWORD /d 2 /f
+
+REG ADD HKU\Default\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v ShowCortanaButton /t REG_DWORD /d 0 /f
+
+REG ADD HKU\Default\SOFTWARE\Microsoft\Windows\CurrentVersion\Search /v SearchboxTaskbarMode /t REG_DWORD /d 1 /f
+
+REG ADD HKU\DEFAULT\Control Panel\Keyboard /v InitialKeyboardIndicators /t REG_SZ /d 2 /f
+
+reg unload HKU\default
+
+
+#Enables num lock for system
+REG ADD HKU\.DEFAULT\Control Panel\Keyboard /v InitialKeyboardIndicators /t REG_SZ /d 2 /f
+
 #Starts Update Scan
 C:\Windows\system32\usoclient.exe StartInteractiveScan
 

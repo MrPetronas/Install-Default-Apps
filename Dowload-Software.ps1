@@ -24,13 +24,13 @@ REG ADD HKU\Default\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced 
 
 REG ADD HKU\Default\SOFTWARE\Microsoft\Windows\CurrentVersion\Search /v SearchboxTaskbarMode /t REG_DWORD /d 1 /f
 
-REG ADD HKU\DEFAULT\Control Panel\Keyboard /v InitialKeyboardIndicators /t REG_SZ /d 2 /f
+REG ADD "HKU\DEFAULT\Control Panel\Keyboard" /v InitialKeyboardIndicators /t REG_SZ /d 2 /f
 
 reg unload HKU\default
 
 
 #Enables num lock for system
-REG ADD HKU\.DEFAULT\Control Panel\Keyboard /v InitialKeyboardIndicators /t REG_SZ /d 2 /f
+REG ADD "HKU\.DEFAULT\Control Panel\Keyboard" /v InitialKeyboardIndicators /t REG_SZ /d 2 /f
 
 #Starts Update Scan
 C:\Windows\system32\usoclient.exe StartInteractiveScan

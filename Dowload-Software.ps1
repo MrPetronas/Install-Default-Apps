@@ -43,7 +43,7 @@ $url1 = "https://ninite.com/7zip-chrome-firefox-notepadplusplus-vlc/ninite.exe"
 $output1 = "~\Downloads\ninite.exe"
 
 
-$url2 = "https://admdownload.adobe.com/bin/live/readerdc_en_a_install.exe"
+$url2 = "https://admdownload.adobe.com/rdcm/installers/live/readerdc64.exe"
 $output2 = "~\Downloads\readerdc_en_a_install.exe"
 
 

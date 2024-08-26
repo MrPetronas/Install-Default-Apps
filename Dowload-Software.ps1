@@ -101,8 +101,7 @@ if((read-host "ar reikia office 365? jei ne spauskite N ir Enter") -like "n")
 $userName = "administrator"
 Enable-LocalUser -Name $userName
 Write-Host "Suvesk lokalaus Admin PSW"
-$Password = Read-Host
-$Password = (convertto-securestring $Password -AsPlainText -Force)
+$Password = Read-Host -AsSecureString "Administrator"
 
 
 $PasswordLadmin = Read-Host -AsSecureString "ladmin password"

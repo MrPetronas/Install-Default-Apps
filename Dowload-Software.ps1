@@ -58,7 +58,7 @@ Invoke-WebRequest -Uri $url2 -OutFile $output2
 sleep -s 5
 Start-Process -FilePath "$output2" -Verb RunAs
 
-wmic bios get serialnumber
+(get-ciminstance win32_bios | select serialnumber).serialnumber
 
 if((read-host "ar reikia office 365? jei ne spauskite N ir Enter") -like "n")
 {
